@@ -1,0 +1,827 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: 'Montserrat' ,'Gotham', 'Century Gothic', Geneva, Verdana, sans-serif;
+    background-color: #000000;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    z-index: 2;
+
+    &__content {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media all and (min-width: 993px) {
+        &__content  {
+            padding-left: 3.75em;
+            padding-right: 3.75em;
+        }
+    }
+
+    &--dim {
+        background-color: #000000;
+    }
+
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@media all and (min-width: 993px) {
+    .header {
+        width: calc(100% - 7.5em);
+        padding-bottom: 2.5em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        width: calc(100% - 50px);
+    }
+}
+
+@media all and (min-width: 993px) {
+    .ds-logo {
+        height: 63px;
+        width: 68px;
+        max-width: 68px;
+    }    
+}
+
+.ds-logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0 18px;
+}
+
+@media all and (min-width: 993px) {
+    .ds-mobile-menu-trigger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .ds-mobile-menu-trigger {
+        display: inline-block;
+        height: 26px;
+        width: 38px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .ds-logo {
+        height: 48px;
+        width: 48px;
+        max-width: 48px;
+    }
+}
+
+.ds-navigation, .ds-footer-navigation {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #FFFFFF;
+
+        li {
+            float: left;
+
+            a {
+                display: block;
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }    
+}
+
+.ds-navigation {
+    padding: 1.031em 2.031em;
+    border-radius: 2em;
+    border: 1px solid #FFFFFF;
+
+    ul li:not(:last-of-type) {
+        margin-right: 2.156em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .ds-navigation {
+        display: none;
+    }
+}
+
+.ds-cta {
+    padding: 1.031em 2.031em;
+    border-radius: 2em;
+    background-color: unset;
+    border: 1px solid #FF5C00;
+    color: #FF5C00;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    height: fit-content;
+    width: fit-content;
+}
+
+.ds-cta-filled {
+    display: block;
+    padding: 1.031em 2.031em;
+    border: none;
+    border-radius: 2em;
+    background-color: #FF5C00;
+    color: #000000;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    height: fit-content;
+    width: fit-content;
+}
+
+.ds-cta-text {
+    padding: 1.031em 2.031em;
+    border-radius: 2em;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-weight: 500;
+    height: fit-content;
+    width: fit-content;
+}
+
+@media all and (min-width: 993px) {
+    .ds-cta-text {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .ds-cta-text {
+        font-size: 1.5rem;
+    }
+}
+
+.ds-button {
+    border-radius: 2em;
+    background-color: unset;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-weight: 500;
+    height: fit-content;
+    width: fit-content;
+    z-index: 1;
+}
+
+@media all and (min-width: 993px) {
+    .ds-button {
+        font-size: 1.25rem;        
+        padding: 1.031em 2.031em;        
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .ds-button {
+        font-size: 0.857rem;
+        padding: 0.688em 1.25rem;
+    }
+}
+
+.main-banner-wrapper {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .banner {
+        &-logo-wrapper {
+            z-index: 2;
+        }
+
+        &-description {
+            font-weight: 400;
+        }        
+    }
+
+    @media all and (min-width: 993px) {
+        .banner-logo-wrapper {
+            .banner-description {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .banner-logo-wrapper {
+            .banner-logo {
+                width: 100%;
+                max-width: 503px;
+            }
+
+            .banner-description {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 993px) {
+    .main-banner-wrapper {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url('./images/Banner--desktop.png');        
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main-banner-wrapper {
+        background-image: none;
+        margin-top: 68px;
+        position: relative;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url('./images/Banner--mobile.png');
+            background-size: cover;
+            height: 100%;
+            max-height: 287px;
+            width: 100%;
+            z-index: 0;
+        }
+    }
+}
+
+.main-banner-rectangle {
+    @media all and (min-width: 993px) {
+        &--desktop, &--mobile {
+            position: absolute;
+            top: 330px;
+            right: 34%;
+            z-index: 1;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        &--desktop, &--mobile {
+            position: absolute;
+            top: 90px;
+            right: 42%;
+            z-index: 1;
+        }
+    }
+}
+
+section#main {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 992px) {
+        .ds-button {
+            margin-left: auto;
+        }
+    }
+
+    .section-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5em 0;
+    }
+
+    .banner-description {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 10px 0;
+        color: #FFFFFF;
+    }
+}
+
+@media all and (min-width: 993px) {
+    section#main {
+        padding-top: 12.5em;
+        padding-bottom: 630px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    section#main {
+        flex-direction: column-reverse;
+        padding-top: 34px;
+        padding-bottom: 75px;
+        gap: 175px 0;
+    }
+}
+
+section#need-for-traff {
+    position: relative;
+}
+
+.ds-section-header {
+    position: relative;
+    border-radius: 2em;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-weight: 400;
+    height: fit-content;
+    width: fit-content;
+
+    sup {
+        position: absolute;
+        top: -33px;
+        right: -55px;
+        transform: rotateZ(10deg);
+        padding: 0.5em 0.8em;
+        border-radius: 2em;
+        border: 1px solid #FFFFFF;
+        color: #FFFFFF;
+        font-family: inherit;
+        font-size: 0.875rem;
+        font-weight: 500;
+        height: fit-content;
+        width: fit-content;
+    }
+}
+
+
+@media all and (min-width: 993px) {
+    .ds-section-header {
+        padding: 1.031em 2.031em;
+        font-size: 32px;
+
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .ds-section-header {
+        padding: 0.45em 24px;
+        font-size: 24px;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+
+.ds-rounded-text {
+    padding: 1.5em;
+    color: #FFFFFF;
+    border: 1px solid #303030;
+    border-radius: 1.875em;
+    overflow: hidden;
+    font-weight: 400;
+
+    &.opaque {
+        background-color: #111111;
+    }
+
+    a:not(.ds-cta):not(.ds-cta-filled) {
+        color: #FF5C00;
+        text-decoration: underline;
+    }
+}
+
+@media all and (min-width: 993px) {
+    .ds-rounded-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .ds-rounded-text {
+        font-size: 1rem;
+    }
+}
+
+.ds-cta-paragraph {
+    padding: 3.75em 0;
+}
+
+@media screen and (max-width: 992px) {
+    .ds-cta-paragraph {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px 0;
+    }
+}
+
+.ds-legal {
+    font-size: 1rem;
+}
+
+.ds-card-holder {
+    display: flex;
+}
+
+@media all and (min-width: 993px) {
+    .ds-card-holder {
+        flex-flow: row nowrap;
+        gap: 0 1.563em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .ds-card-holder {
+        flex-flow: column wrap;
+        gap: 1.563em 0;
+    }
+}
+
+.ds-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.75em 0;
+    padding: 1.438em;
+    color: #FFFFFF;
+    border: 1px solid #303030;
+    border-radius: 1.875em;
+
+    &__icon {
+        height: 100px;
+        flex: 0 0 auto;
+    }
+
+    @media all and (min-width: 993px) {
+        p {
+            font-size: 1.5rem;
+        }
+    }
+    
+    @media screen and (max-width: 992px) {
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+.ds-circle-logo {
+    position: absolute;
+    overflow: hidden;
+
+    @media all and (min-width: 993px) {
+        &--half-edge {
+            bottom: -20%;
+            right: 0;
+            width: 171px;
+            height: 311px;
+        }
+    }
+    
+    @media screen and (max-width: 992px) {
+        &--half-edge {
+            bottom: 26px;
+            left: 0;
+            width: 80px;
+            height: 136px;
+            transform: rotateZ(180deg);
+        }
+    }
+
+    @media all and (min-width: 993px) {
+        &--edge {
+            bottom: 0;
+            right: 0;
+        }
+    }
+    
+    @media screen and (max-width: 992px) {
+        &--edge {
+            bottom: -10px;
+            right: 0;
+            height: 85px;
+            width: 120px;
+        }
+    }
+
+    @media all and (min-width: 993px) {
+        &--top-edge {
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+.ds-prizes-container {
+
+    .ds-illustrated-row {
+        h3 {
+            font-weight: 400;
+        }
+    
+        @media all and (min-width: 993px) {
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    
+        @media screen and (max-width: 992px) {
+            h3 {
+                font-size: 1.25rem;
+            }
+        }
+
+        .ds-rounded-text {
+            font-size: 1.25rem;
+        }
+    }
+
+
+    @media all and (min-width: 993px) {     
+        .ds-illustrated-row {
+            display: flex;
+            gap: 0 1.5em;
+            margin-bottom: 1.5em;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .ds-illustrated-row {
+            background-color: #111111;
+            border: 1px solid #303030;
+            border-radius: 1.875em;
+
+            &__illustration img {
+                height: auto;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .ds-illustrated-row__content.swiper-slide-active {
+            padding: 1.5em;
+        }
+
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+.ds-relative {
+    position: relative;
+}
+
+.footer-banner {
+    // height: 283px;
+    // width: 100%;
+    max-width: 1320px;
+    border-radius: 32px;
+    background: #FF7222 url('./images/footer-banner-decor.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+    position: relative;
+
+    &:before {
+        content: '';
+        background: url('./images/logo-half-circle-leftedge.png');
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 107px;
+        width: 131px;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+    }
+
+    @media all and (min-width: 993px) {
+        &__title {
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        &__title {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media all and (min-width: 993px) {
+        &__text {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        &__text {
+            font-size: 1rem;
+        }
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .half {
+        margin-left: auto;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 38.50px 0;
+    }
+
+    .registration {
+        display: block;
+        padding: 1.031em 2.031em;
+        border: none;
+        border-radius: 2em;
+        background-color: #000000;
+        color: #FF5C00;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        height: fit-content;
+        width: fit-content;
+    }
+}
+
+@media all and (min-width: 993px) {
+    .footer-banner {
+        padding: 80px 5em 25px 5em;
+    }
+}
+
+.footer {
+    background-color: #111111;
+    border: 1px solid #303030;
+    border-radius: 1.875em;
+    color: #FFFFFF;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2.5em;
+
+    @media screen and (max-width: 992px) {
+        .ds-circle-logo {
+            display: none;
+        }
+    }
+
+    &__top {
+        display: flex;
+
+        position: relative;
+        padding: 1.5em;
+
+        .ds-footer {
+            &-navigation {
+                display: flex;
+                flex-direction: column;
+                gap: 32px 0;
+
+                @media all and (min-width: 993px) {
+                    &__columns {
+                        flex-direction: row;
+                        gap: 0 2rem;
+                    }         
+                }
+
+                @media screen and (max-width: 992px) {
+                    &__columns {
+                        justify-content: space-between;
+                    }
+                }
+
+                &__columns {
+                    display: flex;
+                }
+
+                &__anchors {
+                    li:not(:last-of-type) {
+                        margin-right: 2rem;
+                    }
+                }
+
+                @media all and (min-width: 993px) {
+                    &__anchors {
+
+                    }
+                }
+            
+                @media screen and (max-width: 992px) {
+                    &__anchors {
+                        display: flex;
+                        flex-direction: column;
+
+                        li:not(:last-of-type) {
+                            margin-bottom: 27px;
+                        }
+                    }
+                }
+
+                &__socials {
+                    li:not(:last-of-type) {
+                        margin-right: 0.75rem;
+                    }
+                }
+            }
+            
+            &__links {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            @media all and (min-width: 993px) {
+                &__links {
+                    margin-top: 47px;
+                }
+            }     
+
+        }        
+    }
+
+
+
+    @media all and (min-width: 993px) {
+        &__top {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 0 77px;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        &__top {
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 48px 0;
+        }
+    }
+
+    &__bottom {
+        border-top: 1px solid #303030;
+        padding-left: 3.75em;
+        padding-right: 3.75em;
+
+        p {
+            margin: 35px 0;
+            text-align: center;            
+        }
+    }
+}
+
+
+@media all and (min-width: 993px) {
+    header, section {
+        padding-top: 2.5em;
+        padding-left: 3.75em;
+        padding-right: 3.75em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    header, section {
+        padding-top: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+
+#need-for-traff {
+    @media all and (min-width: 993px) {
+        .ds-cta {
+            font-size: 1rem;            
+        }
+    }
+    
+    @media screen and (max-width: 992px) {
+        .ds-cta {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #grand-finale {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+    }    
+}
