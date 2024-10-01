@@ -290,10 +290,10 @@ html, body {
 }
 
 @media all and (min-width: 993px) {
-  .main-banner-wrapper picture {
+  body:not(.oferta) .main-banner-wrapper picture {
     z-index: 1;
   }
-  .main-banner-wrapper picture:before {
+  body:not(.oferta) .main-banner-wrapper picture:before {
     content: "";
     position: absolute;
     z-index: 4;
@@ -304,9 +304,10 @@ html, body {
     background: url("./images/banner-text--desktop.png");
   }
 }
+
 @media all and (min-width: 993px) {
   .main-banner-wrapper.oferta section {
-    margin-top: -1.5em;
+    margin-top: 1.5em;
     padding-top: 0;
   }
 }
