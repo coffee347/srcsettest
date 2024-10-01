@@ -32,4 +32,31 @@ window.addEventListener('scroll', function() {
     } 
 });
 
-let prizeSlider = new Swiper('.ds-illustrated-row');
+
+window.addEventListener('resize', function() {
+    let windowWidth = window.innerWidth;
+
+    if (windowWidth < 993) {
+        new Swiper('.ds-row-slider', {
+            pagination: {
+                el: '.ds-prizes-container .ds-swiper-pagination',
+            },
+        });
+
+        console.info('Swiper slider initialized');
+        
+    } else {
+        if (document.querySelector('.ds-row-slider').classList.contains('swiper-initialized')) {
+            let allSliders = document.querySelectorAll('.ds-row-slider');
+
+            allSliders.forEach(element => {
+                element.swiper.destroy();  
+                console.info('Swiper slider deactivated');
+            });
+            
+            
+        }
+    }
+
+    console.log(windowWidth);
+});
