@@ -5,12 +5,11 @@ html(lang="ru")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title="DS Partners"
         link(rel="stylesheet", href="style.css")
-        script(src="navigation.js")
     body.oferta
         header.header
             .header__content
                 .ds-logo-wrapper
-                    img.ds-mobile-menu-trigger(src='images/mobile-menu-trigger.png')
+                    img#mobile-menu-trigger.ds-mobile-menu-trigger(src='images/mobile-menu-trigger.png')
                     img.ds-logo(src="images/Logo.png", alt="Website logo")
 
                 nav.ds-navigation
@@ -26,7 +25,34 @@ html(lang="ru")
                         li 
                             a(href="#join") Приєднатися
                 button.ds-cta Реєстрація
-        
+
+        .ds-mobile-menu
+            .ds-mobile-menu__close
+                img(src='images/menu-close.png')#mobile-menu-close.ds-mobile-menu-trigger
+            nav.ds-mobile-menu__navigation
+                ul
+                    li 
+                        a(href="#main") Головна
+                    li 
+                        a(href="#need-for-traff") Need for Traff
+                    li 
+                        a(href="#conditions") Умови
+                    li 
+                        a(href="#grand-finale") Гранд-фінал
+                    li 
+                        a(href="#join") Приєднатися            
+            ul.ds-mobile-menu__socials
+                li
+                    a(href="https://t.me/dspartners_pro")
+                        img(src="images/footer-icon-telegram.png")    
+                li
+                    a(href="https://www.instagram.com/dspartners.pro/")
+                        img(src="images/footer-icon-instagram.png")
+                li
+                    a(href="mailto:nft@dspartners.pro")
+                        img(src="images/footer-icon-mail.png")
+            img(src="images/logo-half-circle-mobilemenu.png").ds-circle-logo.ds-circle-logo--mobile-menu
+
         .main-banner-wrapper.oferta
             picture
                 source(media="(min-width: 577px)", srcset="images/Oferta-banner--desktop.png")
@@ -163,3 +189,4 @@ html(lang="ru")
 
                 .footer__bottom
                     p © 2024 DS Partners. All rights reserved.
+        script(src="navigation.js")

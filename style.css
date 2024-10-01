@@ -72,13 +72,57 @@ html, body {
   }
 }
 .ds-mobile-menu {
-  display: none;
+  position: absolute;
+  left: -380px;
+  top: 0;
+  display: flex;
   width: 380px;
   height: 812px;
   background-color: #0B0B0B;
+  flex-direction: column;
+  z-index: 2;
 }
 .ds-mobile-menu--opened {
+  left: 0;
+}
+.ds-mobile-menu__close {
+  margin-left: 22px;
+  margin-top: 26px;
+  margin-bottom: 117px;
+}
+.ds-mobile-menu__close img {
+  height: 32px;
+  width: 32px;
+}
+.ds-mobile-menu__navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.ds-mobile-menu__navigation ul li {
   display: block;
+  padding: 20px 22px 27px;
+  border-bottom: 1px solid #303030;
+  font-size: 1.5rem;
+}
+.ds-mobile-menu__navigation ul li a {
+  display: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+.ds-mobile-menu__socials {
+  list-style-type: none;
+  padding: 0 0 0 22px;
+  margin: 55px 0 0;
+}
+.ds-mobile-menu__socials li {
+  float: left;
+}
+.ds-mobile-menu__socials li:not(:last-of-type) {
+  margin-right: 0.75rem;
 }
 
 @media screen and (max-width: 992px) {
@@ -121,6 +165,7 @@ html, body {
 }
 .ds-cta, .ds-cta-filled {
   cursor: pointer;
+  z-index: 1;
 }
 
 .ds-cta {
@@ -206,14 +251,25 @@ html, body {
   }
 }
 .main-banner-wrapper picture {
+  display: block;
+  position: relative;
   width: 100%;
 }
 .main-banner-wrapper picture img {
   height: auto;
   width: 100%;
 }
+.main-banner-wrapper picture:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+}
 .main-banner-wrapper .banner-logo-wrapper {
-  z-index: 2;
+  z-index: 1;
 }
 .main-banner-wrapper .banner-description {
   font-weight: 400;
@@ -226,7 +282,7 @@ html, body {
 @media screen and (max-width: 992px) {
   .main-banner-wrapper .banner-logo-wrapper .banner-logo {
     width: 100%;
-    max-width: 503px;
+    max-width: 235px;
   }
   .main-banner-wrapper .banner-logo-wrapper .banner-description {
     font-size: 1.25rem;
@@ -235,16 +291,17 @@ html, body {
 
 @media all and (min-width: 993px) {
   .main-banner-wrapper picture {
-    position: relative;
+    z-index: 1;
   }
-  .main-banner-wrapper picture:after {
+  .main-banner-wrapper picture:before {
     content: "";
     position: absolute;
-    bottom: -10px;
-    left: 0;
-    height: 100px;
-    width: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    z-index: 4;
+    top: 34%;
+    right: 35%;
+    height: 111px;
+    width: 276px;
+    background: url("./images/banner-text--desktop.png");
   }
 }
 @media all and (min-width: 993px) {
@@ -264,23 +321,18 @@ html, body {
     margin-bottom: 15px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 485px) and (max-width: 992px) {
   .main-banner-wrapper {
     background-image: none;
     margin-top: 68px;
     position: relative;
   }
-  .main-banner-wrapper:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url("./images/Banner--mobile.png");
-    background-size: cover;
-    height: 100%;
-    max-height: 287px;
-    width: 100%;
-    z-index: 0;
+}
+@media screen and (max-width: 484px) {
+  .main-banner-wrapper {
+    background-image: none;
+    margin-top: 68px;
+    position: relative;
   }
 }
 @media all and (min-width: 993px) {
@@ -323,15 +375,19 @@ section#main .banner-description {
 
 @media all and (min-width: 993px) {
   section#main {
+    position: absolute;
+    width: calc(100% - 7.5em);
+    top: 5%;
     padding-top: 12.5em;
     padding-bottom: 630px;
   }
 }
 @media screen and (max-width: 992px) {
   section#main {
+    position: absolute;
+    top: 0;
+    width: calc(100% - 50px);
     flex-direction: column-reverse;
-    padding-top: 34px;
-    padding-bottom: 75px;
     gap: 175px 0;
   }
 }
@@ -534,6 +590,14 @@ section#need-for-traff {
   .ds-circle-logo--top-edge {
     top: 0;
     right: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .ds-circle-logo--mobile-menu {
+    bottom: 0;
+    right: 0;
+    height: 183px;
+    width: 178px;
   }
 }
 

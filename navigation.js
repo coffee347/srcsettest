@@ -32,14 +32,46 @@ window.addEventListener('scroll', function() {
     } 
 });
 
+let windowWidth = window.innerWidth;
+if (windowWidth < 993) {
+    new Swiper('.ds-row-slider', {
+        pagination: {
+            el: '.ds-swiper-pagination',
+        },
+    });
+}
+
+
+let absolutePositionedEl = document.querySelector('.main-banner-wrapper');
+let mainSection = document.querySelector('.main-banner-wrapper section#main');
+
+let nextSection = document.querySelector('section#need-for-traff');
+
+let problematicElementPosition = '';
 
 window.addEventListener('resize', function() {
     let windowWidth = window.innerWidth;
+    let windowHeight = window.innerHeight;
+
+    let mainSectionBottomCoord = windowHeight - mainSection.offsetTop - mainSection.offsetHeight;
+    let nextSectionTop = nextSection.offsetTop;
+
+    console.log(mainSectionBottomCoord);
+    console.log(nextSectionTop);
+
+    // if (nextSectionTop < mainSectionBottomCoord || nextSectionTop == problematicElementPosition) {
+    //     problematicElementPosition = nextSectionTop;
+    //     nextSection.style.marginTop = mainSectionBottomCoord - problematicElementPosition + 10 + 'px';
+    // }
+    
+    // if (nextSectionTop >= mainSectionBottomCoord + 10) {
+    //     nextSection.style.marginTop = 0;
+    // }
 
     if (windowWidth < 993) {
         new Swiper('.ds-row-slider', {
             pagination: {
-                el: '.ds-prizes-container .ds-swiper-pagination',
+                el: '.ds-swiper-pagination',
             },
         });
 
@@ -57,6 +89,17 @@ window.addEventListener('resize', function() {
             
         }
     }
-
-    console.log(windowWidth);
 });
+
+
+let mobileMenu = document.querySelector('.ds-mobile-menu');
+let mobileMenuTrigger = document.querySelector('#mobile-menu-trigger');
+let mobileMenuClose = document.querySelector('#mobile-menu-close');
+
+mobileMenuTrigger.addEventListener('click', function() {
+    mobileMenu.classList.add('ds-mobile-menu--opened')
+})
+
+mobileMenuClose.addEventListener('click', function() {
+    mobileMenu.classList.remove('ds-mobile-menu--opened')
+})

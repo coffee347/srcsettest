@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <div class="header__content">
-        <div class="ds-logo-wrapper"><img class="ds-mobile-menu-trigger" src="images/mobile-menu-trigger.png"><img class="ds-logo" src="images/Logo.png" alt="Website logo"></div>
+        <div class="ds-logo-wrapper"><img class="ds-mobile-menu-trigger" id="mobile-menu-trigger" src="images/mobile-menu-trigger.png"><img class="ds-logo" src="images/Logo.png" alt="Website logo"></div>
         <nav class="ds-navigation">
           <ul>
             <li> <a href="#main">Головна</a></li>
@@ -23,10 +23,27 @@
         <button class="ds-cta">Реєстрація</button>
       </div>
     </header>
+    <div class="ds-mobile-menu">
+      <div class="ds-mobile-menu__close"><img class="ds-mobile-menu-trigger" src="images/menu-close.png" id="mobile-menu-close"></div>
+      <nav class="ds-mobile-menu__navigation">
+        <ul>
+          <li> <a href="#main">Головна</a></li>
+          <li> <a href="#need-for-traff">Need for Traff</a></li>
+          <li> <a href="#conditions">Умови</a></li>
+          <li> <a href="#grand-finale">Гранд-фінал</a></li>
+          <li> <a href="#join">Приєднатися            </a></li>
+        </ul>
+      </nav>
+      <ul class="ds-mobile-menu__socials">
+        <li><a href="https://t.me/dspartners_pro"><img src="images/footer-icon-telegram.png"></a></li>
+        <li><a href="https://www.instagram.com/dspartners.pro/"><img src="images/footer-icon-instagram.png"></a></li>
+        <li><a href="mailto:nft@dspartners.pro"><img src="images/footer-icon-mail.png"></a></li>
+      </ul><img class="ds-circle-logo ds-circle-logo--mobile-menu" src="images/logo-half-circle-mobilemenu.png">
+    </div>
     <div class="main-banner-wrapper">
       <picture>
-        <source media="(min-width: 577px)" srcset="images/banner-text--desktop.png">
-        <source media="(min-width: 0)" srcset="images/banner-text--mobile.png "><img src="images/ps5.png" alt="Hero section banner text with a car">
+        <source media="(min-width: 577px)" srcset="images/Banner--desktop.png">
+        <source media="(min-width: 0)" srcset="images/Banner--mobile.png "><img src="images/Banner--mobile.png" alt="Hero section banner text with a car">
       </picture>
       <section id="main">
         <div class="section-content">
@@ -58,53 +75,6 @@
         <button class="ds-cta">Реєстрація</button>
       </div><img class="ds-circle-logo ds-circle-logo--half-edge" src="images/half-circle-logo-half.png">
     </section>
-    <!-- section#conditions 
-    h2.ds-section-header Умови конкурсу
-        sup Need for Traff
-    p.ds-rounded-text.opaque
-        | Конкурс триває з 1.11.2024 по 31.12.2024 року включно.</br>
-        | Для того, щоб зареєструватися в конкурсі, потрібно <a href="#">перейти в бот</a>.</br>
-        | Наш конкурс має три рівня участі, кожен з яких передбачає окремий подарунок.
-    p.ds-rounded-text.opaque
-        | Виконавши всі три рівня, ви автоматично берете участь у всіх етапах конкурса і можете виграти будь-який із призів (навіть якщо ви вже виграли щось на рівнях 1 і 2, ви продовжуєте брати участь у розіграші автомобіля).
-    .ds-illustrated-row
-        .ds-illustrated-row__illustration
-            img(src="images/ps5.png")
-        .ds-rounded-text.opaque
-            .ds-cta Рівень 1 - PlayStation
-            h3.illustated-row-header Виконавши умови першого рівня, ви можете виграти PlayStation 5
-            ul
-                li Зареєструватися в <a href="#">Telegram-боті</a> та натиснути кнопку 'Приступити до виконання'
-                li Підписатися на офіційні сторінки DS Partners в <a href="#">Instagram</a> та <a href="#">Telegram</a>
-                li Поставити лайк <a href="#">конкурсному посту</a> в Instagram 
-                li У коментарях під конкурсним постом відзначити одного друга
-                li Зробити репост <a href="#">конкурсного посту</a> до себе в Instagram сторіс 
-    .ds-illustrated-row
-        .ds-rounded-text.opaque
-            .ds-cta Рівень 2 - iPhone 16
-            h3.illustated-row-header Виконавши умови другого рівня, ви можете виграти iPhone 16
-            ul
-               li Зареєструватися в <a href="#">Telegram-боті</a> та натиснути кнопку 'Приступити до виконання'
-               li <a href="#">Зареєструватися</a> в партнерській програмі DS Partners
-               li Відлити капу на один з офферів
-               li Задонатити 500 гривень у благодійний фонд <a href="#">“Hrabar Foundation” ЛІНК НА МОНОБАНКУ</a>
-        .ds-illustrated-row__illustration
-            img(src="images/iphone.png")
-    .ds-illustrated-row
-        .ds-illustrated-row__illustration
-            img(src="images/car.png")
-        .ds-rounded-text.opaque
-            .ds-cta Рівень 3 - автомобіль
-            h3.illustated-row-header Виконавши умови третього рівня, ви можете виграти автомобіль 
-            ul
-                li Зареєструватися в <a href="#">Telegram-боті</a> та натиснути кнопку 'Приступити до виконання'
-                li Виконати умови Рівнів 1 і 2
-                li Підписатися на офіційні сторінки DS Partners в <a href="#">Instagram</a> та <a href="#">Telegram</a>, поставити лайк <a href="#">конкурсному посту</a> в Instagram, у коментарях під конкурсним постом відмітити одного друга, зробити репост конкурсного посту до себе в Instagram сторіс
-                li <a href="#">Зареєструватися</a> в партнерській програмі DS Partners і відлити капу на один з офферів
-                li Задонатити 500 гривень у благодійний фонд <a href="#">“Hrabar Foundation” ЛІНК НА БАНКУ</a>
-    p.ds-rounded-text.opaque.ds-legal * фото мають ілюстративний характер, фінальний приз може відрізнятися від картинки.
-    
-    -->
     <section id="conditions"> 
       <h2 class="ds-section-header">Умови конкурсу<sup>Need for Traff</sup></h2>
       <p class="ds-rounded-text opaque">
