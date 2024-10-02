@@ -236,6 +236,24 @@ html, body {
     text-decoration: none;
     height: fit-content;
     width: fit-content;
+
+
+    &__inversed {
+        background-color: #000000;
+        color: #FF5C00;
+    }
+
+    // @media all and (min-width: 993px) {
+    //     &__inversed {
+    //         margin-left: 50%;
+    //     }
+    // }
+    
+    @media screen and (max-width: 992px) {
+        &__inversed {
+            margin: auto;
+        }
+    }
 }
 
 .ds-cta-text {
@@ -485,8 +503,6 @@ section#main {
 section#need-for-traff {
     position: relative;
 }
-
-
 
 .ds-section-header {
     position: relative;
@@ -985,12 +1001,7 @@ ul, ol {
     }
 }
 
-
-
 .footer-banner {
-    // height: 283px;
-    // width: 100%;
-    // max-width: 1320px;
     border-radius: 32px;
     overflow: hidden;
     position: relative;
@@ -1015,6 +1026,22 @@ ul, ol {
             text-align: center;
             width: 90%;
             margin: 0 auto ;
+        }
+    }
+
+    @media all and (min-width: 993px) {
+        &__wrapper--left {
+            width: 50%;
+            margin-left: 50%;
+            gap: 38.50px 0;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        &__wrapper--left{
+            margin: auto;
+            width: 90%;
+            text-align: center;
         }
     }
 
@@ -1044,74 +1071,32 @@ ul, ol {
         }
     }
 
-    &__text, &__content {
+    &__text, &__wrapper--left {
         display: flex;
         flex-direction: column;        
     }
 
-    &__content {
+    &__wrapper--left {
         display: flex;
         flex-direction: column;
     }
 
     @media all and (min-width: 993px) {
-        &__content {
+        &__wrapper--left {
             gap: 30px 0;
             margin-bottom: 20px;
         }
     }
 
     @media screen and (max-width: 992px) {
-        &__content {
+        &__wrapper--left {
             gap: 30px 0;
             text-align: center;
             margin-bottom: 20px;
         }     
     }
 
-    @media all and (min-width: 993px) {
-        &__text {
-            margin-left: auto;
-            width: 50%;
-            gap: 38.50px 0;
-        }
-    }
 
-    @media screen and (max-width: 992px) {
-        &__text {
-            margin: auto;
-            width: 90%;
-            text-align: center;
-        }        
-    }
-
-    &__cta {
-        display: block;
-        padding: 1.031em 2.031em;
-        border: none;
-        border-radius: 2em;
-        background-color: #000000;
-        color: #FF5C00;
-        font-family: inherit;
-        font-size: 1rem;
-        font-weight: 600;
-        text-decoration: none;
-        height: fit-content;
-        width: fit-content;
-    }
-
-    @media all and (min-width: 993px) {
-        &__cta {
-            margin-left: 50%;
-        }
-    }
-    
-
-    @media screen and (max-width: 992px) {
-        &__cta {
-            margin: auto;
-        }
-    }
 }
 
 @media all and (min-width: 993px) {
@@ -1299,4 +1284,68 @@ ul, ol {
         flex-direction: column;
         gap: 23px;
     }    
+}
+
+.background-notfound {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    section {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: auto;
+        margin-right: auto;
+
+        .section-content {
+            text-align: center;            
+        }
+
+        @media all and (min-width: 993px) {
+            img {
+                height: auto;
+                width: 100%;
+                max-width: 397px;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            img {
+                width: 191px;
+                height: 96px;
+                object-fit: scale-down;
+            }
+        }
+
+
+        p {
+            font-size: 1.5rem;
+            color: #FFFFFF;
+        }
+
+        button {
+            margin: auto;
+        }
+
+    }
+}
+
+@media all and (min-width: 577px) {
+    .background-notfound {
+        background: url('../images/404-background--desktop.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .background-notfound {
+        background: url('../images/404-background--mobile.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
