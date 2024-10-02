@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DS Partners</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/fonts-loader.css">
   </head>
   <body>
     <header class="header">
@@ -48,7 +49,7 @@
       <section id="main">
         <div class="section-content">
           <div class="banner-logo-wrapper"><img class="banner-logo" src="images/banner-logo.png" alt="Banner logo"><span class="banner-description">by DS partners</span></div><a class="ds-cta-filled" href="#">Реєстрація</a>
-        </div>
+        </div><img class="ds-circle-logo ds-circle-logo--half-edge-2" src="images/half-circle-logo-half.png">
         <div class="ds-button">Реєструйся та забирай</div>
       </section>
     </div>
@@ -84,7 +85,7 @@
       </p>
       <p class="ds-rounded-text opaque">Виконавши всі три рівня, ви автоматично берете участь у всіх етапах конкурса і можете виграти будь-який із призів (навіть якщо ви вже виграли щось на рівнях 1 і 2, ви продовжуєте брати участь у розіграші автомобіля).</p>
       <div class="ds-prizes-container">
-        <div class="ds-illustrated-row">
+        <div class="ds-illustrated-row ds-illustrated-row-ps5">
           <div class="ds-row-slider">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -109,8 +110,8 @@
                 </div>
               </div>
             </div>
+            <div class="ds-swiper-pagination"></div>
           </div>
-          <div class="ds-swiper-pagination"></div>
           <div class="ds-row-desktop">
             <div class="ds-row-desktop__illustration"> 
               <picture>
@@ -131,7 +132,7 @@
             </div>
           </div>
         </div>
-        <div class="ds-illustrated-row">
+        <div class="ds-illustrated-row ds-illustrated-row-iphone">
           <div class="ds-row-slider">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -155,8 +156,8 @@
                 </div>
               </div>
             </div>
+            <div class="ds-swiper-pagination"></div>
           </div>
-          <div class="ds-swiper-pagination"></div>
           <div class="ds-row-desktop">
             <div class="ds-row-desktop__content"> 
               <div class="ds-cta">Рівень 2 - iPhone 16</div>
@@ -176,7 +177,7 @@
             </div>
           </div>
         </div>
-        <div class="ds-illustrated-row">
+        <div class="ds-illustrated-row ds-illustrated-row-car">
           <div class="ds-row-slider">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -201,8 +202,8 @@
                 </div>
               </div>
             </div>
+            <div class="ds-swiper-pagination"></div>
           </div>
-          <div class="ds-swiper-pagination"></div>
           <div class="ds-row-desktop">
             <div class="ds-row-desktop__illustration"> 
               <picture>
@@ -281,6 +282,7 @@
       </footer>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="navigation.js"></script>
+    <script src="scripts/swiper-init.js"></script>
+    <script src="scripts/navigation.js"></script>
   </body>
 </html>
