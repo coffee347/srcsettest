@@ -301,7 +301,7 @@ html, body {
     right: 35%;
     height: 111px;
     width: 276px;
-    background: url("./images/banner-text--desktop.png");
+    background: url("../images/banner-text--desktop.png");
   }
 }
 
@@ -825,7 +825,7 @@ ul li ul li::marker, ol li ul li::marker {
 }
 .footer-banner:before {
   content: "";
-  background: url("./images/logo-half-circle-leftedge.png");
+  background: url("../images/logo-half-circle-leftedge.png");
   position: absolute;
   height: 107px;
   width: 131px;
@@ -930,7 +930,7 @@ ul li ul li::marker, ol li ul li::marker {
 @media all and (min-width: 993px) {
   .footer-banner {
     padding: 80px 5em 25px 5em;
-    background: #FF7222 url("./images/footer-banner-decor--desktop.png");
+    background: #FF7222 url("../images/footer-banner-decor--desktop.png");
     background-size: contain;
     background-position: left center;
     background-repeat: no-repeat;
@@ -945,7 +945,7 @@ ul li ul li::marker, ol li ul li::marker {
 @media screen and (max-width: 992px) {
   .footer-banner {
     padding: 33px 0 20px;
-    background: #FF7222 url("./images/footer-banner-decor--mobile.png");
+    background: #FF7222 url("../images/footer-banner-decor--mobile.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

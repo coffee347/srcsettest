@@ -356,7 +356,7 @@ body:not(.oferta) {
                     right: 35%;
                     height: 111px;
                     width: 276px;
-                    background: url('./images/banner-text--desktop.png');
+                    background: url('../images/banner-text--desktop.png');
                 }
             }
         }
@@ -400,7 +400,7 @@ body:not(.oferta) {
         //     position: absolute;
         //     top: calc(100% - 68px);
         //     left: 0;
-        //     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url('./images/Banner--mobile.png');
+        //     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url('../images/Banner--mobile.png');
         //     background-size: cover;
         //     height: 100%;
         //     max-height: 287px;
@@ -997,7 +997,7 @@ ul, ol {
 
     &:before {
         content: '';
-        background: url('./images/logo-half-circle-leftedge.png');
+        background: url('../images/logo-half-circle-leftedge.png');
         position: absolute;
         height: 107px;
         width: 131px;
@@ -1117,7 +1117,7 @@ ul, ol {
 @media all and (min-width: 993px) {
     .footer-banner {
         padding: 80px 5em 25px 5em;
-        background: #FF7222 url('./images/footer-banner-decor--desktop.png');
+        background: #FF7222 url('../images/footer-banner-decor--desktop.png');
         background-size: contain;
         background-position: left center;
         background-repeat: no-repeat;
@@ -1134,7 +1134,7 @@ ul, ol {
 @media screen and (max-width: 992px) {
     .footer-banner {
         padding: 33px 0 20px;
-        background: #FF7222 url('./images/footer-banner-decor--mobile.png');
+        background: #FF7222 url('../images/footer-banner-decor--mobile.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
