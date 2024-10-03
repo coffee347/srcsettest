@@ -836,6 +836,7 @@ a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link):active {
 }
 @media all and (max-width: 992px) {
   .ds-illustrated-row {
+    width: 100%;
     padding-bottom: 24px;
   }
 }
