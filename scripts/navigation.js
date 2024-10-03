@@ -21,15 +21,20 @@ function Scrollspy(arg) {
 // Sticky header
 window.addEventListener('scroll', function() {
     let sticky = Scrollspy('scrolled');
+    windowWidth = window.innerWidth;
     let headerRoot = document.querySelector('header');
 
-    if ( sticky > 105) {
+    if (windowWidth > 992) {
+        if ( sticky > 105) {
+            headerRoot.classList.add("header--dim");
+        }
+        
+        if ( sticky < 105) {
+            headerRoot.classList.remove("header--dim");
+        }
+    } else {
         headerRoot.classList.add("header--dim");
     }
-    
-    if ( sticky < 105) {
-        headerRoot.classList.remove("header--dim");
-    } 
 });
 
 let mobileMenu = document.querySelector('.ds-mobile-menu');
