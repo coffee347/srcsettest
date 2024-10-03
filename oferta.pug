@@ -4,7 +4,8 @@ html(lang="ru")
         meta(charset="utf8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title="DS Partners"
-        link(rel="stylesheet", href="style.css")
+        link(rel="stylesheet", href="styles/style.css")
+        link(rel="stylesheet", href="styles/fonts-loader.css")
     body.oferta
         header.header
             .header__content
@@ -146,9 +147,9 @@ html(lang="ru")
             .footer-banner
                 .footer-banner__content
                     p.footer-banner__title А ви відчуваєте жагу до трафіку?
-                    p.footer-banner__text Тоді приєднуйтесь до акції 'Need for Traff' від DS Partners і зміни своє життя.
-                button.footer-banner__cta Реєстрація   
-
+                    .footer-banner__wrapper--left
+                        p.footer-banner__text Тоді приєднуйтесь до акції 'Need for Traff' від DS Partners і зміни своє життя.
+                        button.ds-cta-filled.ds-cta-filled__inversed Реєстрація  
         section
             footer.footer
                 img(src="images/logo-half-circle-topedge.png", alt="Website logo").ds-circle-logo.ds-circle-logo--top-edge
@@ -174,7 +175,7 @@ html(lang="ru")
                                         li 
                                             a(href="#join") Приєднатися
                                         li 
-                                            a(href="#   ") Публічна оферта
+                                            a(href="oferta.html") Публічна оферта
 
                                 ul.ds-footer-navigation__socials
                                     li
@@ -189,4 +190,4 @@ html(lang="ru")
 
                 .footer__bottom
                     p © 2024 DS Partners. All rights reserved.
-        script(src="navigation.js")
+        script(src="scripts/navigation.js")
