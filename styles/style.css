@@ -973,7 +973,6 @@ ul li ul li::marker, ol li ul li::marker {
 .footer__top {
   display: flex;
   position: relative;
-  padding: 1.5em 3.188em;
 }
 .footer__top .ds-footer-navigation {
   display: flex;
@@ -1025,6 +1024,7 @@ ul li ul li::marker, ol li ul li::marker {
     flex-direction: row;
     justify-content: flex-start;
     gap: 0 77px;
+    padding: 1.5em 3.188em;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1032,6 +1032,7 @@ ul li ul li::marker, ol li ul li::marker {
     flex-direction: column;
     justify-content: flex-start;
     gap: 48px 0;
+    padding: 1.5em;
   }
 }
 .footer__bottom {
