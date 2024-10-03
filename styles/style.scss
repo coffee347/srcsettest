@@ -897,34 +897,53 @@ a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link) {
         @media screen and (max-width: 992px) {
             &__content {
                 padding: 15px 20px 0;
-                width: 98%;
                 margin: auto;
             }
         }
     }
 
     @media all and (min-width: 993px) {
-        .ds-row-slider, .ds-swiper-pagination {
+        .ds-row-slider, ds-row-slider__pagination {
             display: none;
             visibility: hidden;
         }
     }
 
-    @media screen and (max-width: 992px) {
+    .ds-row-slider__pagination {
+        margin: 16px auto 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        text-align: center;
+
+        li {
+            .splide__pagination__page {
+                background: #5c5c5c;
+            };
+        
+            .splide__pagination__page.is-active {
+                background: #FF5C00;
+                transform: none
+            }; 
+        }
+    
+
+    }
+
+
+    //@media screen and (max-width: 992px) {
         .ds-row-slider {
-                        margin: auto;
+            margin: auto;
+
+            
+
         }
         
-        .swiper-wrapper {
+        .splide__list {
             background-color: #111111;
             border: 1px solid #303030;
             border-radius: 1.875em;
-            width: 100%;
-        }
-
-        .swiper-slide {
-            border: 0.5px solid #FFFFFF;
-            width: 99% !important;
         }
 
         .ds-row-slider__illustration {
@@ -939,7 +958,7 @@ a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link) {
                 object-fit: contain; 
             }
         }
-    }
+    //}
 
     .ds-row-desktop {
         display: flex;
@@ -996,6 +1015,7 @@ a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link) {
 
     @media all and (max-width: 992px) {
         .ds-illustrated-row {
+            width: 100%;
             padding-bottom: 24px;
         }
     }
@@ -1003,24 +1023,7 @@ a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link) {
     
 //}
 
-@media screen and (max-width: 992px) {     
-    .ds-swiper-pagination {
-        margin-top: 16px;
-        text-align: center;
-    }
-}
 
-.ds-swiper-pagination {
-    position: static;
-
-    .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-        background: #303030;
-    };
-
-    .swiper-pagination-bullet-active {
-        background: #FF5C00
-    };
-}
 
 .ds-column-row {
     display: flex;

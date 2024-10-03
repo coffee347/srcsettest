@@ -751,44 +751,55 @@ a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link):active {
 @media screen and (max-width: 992px) {
   .ds-row-slider__content {
     padding: 15px 20px 0;
-    width: 98%;
     margin: auto;
   }
 }
 
 @media all and (min-width: 993px) {
-  .ds-row-slider, .ds-swiper-pagination {
+  .ds-row-slider, ds-row-slider__pagination {
     display: none;
     visibility: hidden;
   }
 }
-@media screen and (max-width: 992px) {
-  .ds-row-slider {
-    margin: auto;
-  }
-  .swiper-wrapper {
-    background-color: #111111;
-    border: 1px solid #303030;
-    border-radius: 1.875em;
-    width: 100%;
-  }
-  .swiper-slide {
-    border: 0.5px solid #FFFFFF;
-    width: 99% !important;
-  }
-  .ds-row-slider__illustration {
-    margin: auto;
-  }
-  .ds-row-slider__illustration img {
-    display: block;
-    padding: 0;
-    margin: 0 auto;
-    height: auto;
-    width: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
+.ds-row-slider__pagination {
+  margin: 16px auto 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
 }
+.ds-row-slider__pagination li .splide__pagination__page {
+  background: #5c5c5c;
+}
+.ds-row-slider__pagination li .splide__pagination__page.is-active {
+  background: #FF5C00;
+  transform: none;
+}
+
+.ds-row-slider {
+  margin: auto;
+}
+
+.splide__list {
+  background-color: #111111;
+  border: 1px solid #303030;
+  border-radius: 1.875em;
+}
+
+.ds-row-slider__illustration {
+  margin: auto;
+}
+.ds-row-slider__illustration img {
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .ds-row-desktop {
   display: flex;
   width: 100%;
@@ -840,22 +851,6 @@ a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link):active {
     padding-bottom: 24px;
   }
 }
-@media screen and (max-width: 992px) {
-  .ds-swiper-pagination {
-    margin-top: 16px;
-    text-align: center;
-  }
-}
-.ds-swiper-pagination {
-  position: static;
-}
-.ds-swiper-pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-  background: #303030;
-}
-.ds-swiper-pagination .swiper-pagination-bullet-active {
-  background: #FF5C00;
-}
-
 .ds-column-row {
   display: flex;
 }
