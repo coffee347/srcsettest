@@ -775,7 +775,7 @@ a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link):active {
   }
   .swiper-slide {
     border: 0.5px solid #FFFFFF;
-    width: 99% !important;
+    width: 98% !important;
   }
   .ds-row-slider__illustration {
     margin: auto;
