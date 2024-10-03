@@ -123,6 +123,14 @@ html, body {
                 display: inherit;
                 color: inherit;
                 text-decoration: none;
+
+                &:hover {
+                    color: #FF5C00;
+                }
+
+                &:active {
+                    color: #FF7222
+                }
             }
         }
     }
@@ -139,26 +147,27 @@ html, body {
                 margin-right: 0.75rem;
             }
         }
-        
-        
 
+        li a {
+            display: flex;
+            justify-content: center;
+            align-items: center;                    
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #FF5C00;
+
+            &:hover {
+                background-color: #C94800;
+            }
+        
+            &:active {
+                background-color: #FF7222;
+            }
+        }
+        
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 992px) {
     .ds-logo {
@@ -184,6 +193,14 @@ html, body {
                 display: block;
                 color: inherit;
                 text-decoration: none;
+
+                &:hover {
+                    color: #FF5C00;
+                }
+
+                &:active {
+                    color: #FF7222
+                }
             }
         }
     }    
@@ -221,6 +238,17 @@ html, body {
     font-weight: 500;
     height: fit-content;
     width: fit-content;
+
+    &:hover {
+        border-color: #C94800;
+        color: #C94800;
+    }
+
+    &:active {
+        border-color: #FF7222;
+        color: #FF7222;
+    }
+
 }
 
 .ds-cta-filled {
@@ -237,10 +265,21 @@ html, body {
     height: fit-content;
     width: fit-content;
 
+    &:hover {
+        background-color: #C94800;
+    }
+
+    &:active {
+        background-color: #FF7222;
+    }
 
     &__inversed {
-        background-color: #000000;
+        background-color: #1D1D1D;
         color: #FF5C00;
+
+        &:hover {
+            background-color: #000000;
+        }
     }
 
     // @media all and (min-width: 993px) {
@@ -583,6 +622,20 @@ section#need-for-traff {
     }
 }
 
+a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link) {
+    color: #FF5C00;
+    text-decoration: underline;
+    word-wrap: break-word;
+
+    &:hover {
+        color: #C94800;
+    }
+
+    &:active {
+        color: #FF7222;
+    }
+}
+
 .ds-rounded-text {
     padding: 1.5em;
     color: #FFFFFF;
@@ -595,11 +648,7 @@ section#need-for-traff {
         background-color: #111111;
     }
 
-    a:not(.ds-cta):not(.ds-cta-filled) {
-        color: #FF5C00;
-        text-decoration: underline;
-        word-wrap: break-word;
-    }
+
 }
 
 @media all and (min-width: 993px) {
@@ -788,11 +837,6 @@ section#need-for-traff {
     .ds-row-slider {
         overflow: hidden;
 
-        a:not(.ds-cta):not(.ds-cta-filled) {
-            color: #FF5C00;
-            text-decoration: underline;
-        }
-
         @media all and (min-width: 993px) {
             &__illustration {
                 width: 33%;
@@ -874,17 +918,19 @@ section#need-for-traff {
         }
 
         .ds-row-slider__illustration {
-            // border: 1px solid #FF5C00;
-            width: 99%;
-        }
+            border: 1px solid #FF5C00;
+            width: 91%;
+            margin: auto;
+            
 
-       img {
-            display: block;
-            padding: 0;
-            margin: 0;
-            height: auto;
-            width: 99%;
-            object-fit: contain; 
+            img {
+                display: block;
+                padding: 0;
+                margin: 0 auto;
+                height: auto;
+                width: 100%;
+                object-fit: contain; 
+            }
         }
     }
 
@@ -906,11 +952,6 @@ section#need-for-traff {
             p, ul li {
                 color: #FFFFFF;
                 font-size: 1.25rem;
-            }
-
-            a:not(.ds-cta):not(.ds-cta-filled) {
-                color: #FF5C00;
-                text-decoration: underline;
             }
         }
 
@@ -1229,6 +1270,24 @@ ul, ol {
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
+            }
+
+            &-navigation__socials li a {
+                display: flex;
+                justify-content: center;
+                align-items: center;                    
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: #FF5C00;
+
+                &:hover {
+                    background-color: #C94800;
+                }
+            
+                &:active {
+                    background-color: #FF7222;
+                }
             }
 
             @media all and (min-width: 993px) {

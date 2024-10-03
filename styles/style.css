@@ -4,7 +4,7 @@ html, body {
   padding: 0;
   font-size: 100%;
   font-family: "Montserrat", "Gotham", "Century Gothic", Geneva, Verdana, sans-serif;
-  background-color: #000000;f
+  background-color: #000000;
 }
 
 .header {
@@ -113,6 +113,12 @@ html, body {
   color: inherit;
   text-decoration: none;
 }
+.ds-mobile-menu__navigation ul li a:hover {
+  color: #FF5C00;
+}
+.ds-mobile-menu__navigation ul li a:active {
+  color: #FF7222;
+}
 .ds-mobile-menu__socials {
   list-style-type: none;
   padding: 0 0 0 22px;
@@ -123,6 +129,21 @@ html, body {
 }
 .ds-mobile-menu__socials li:not(:last-of-type) {
   margin-right: 0.75rem;
+}
+.ds-mobile-menu__socials li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #FF5C00;
+}
+.ds-mobile-menu__socials li a:hover {
+  background-color: #C94800;
+}
+.ds-mobile-menu__socials li a:active {
+  background-color: #FF7222;
 }
 
 @media screen and (max-width: 992px) {
@@ -147,6 +168,12 @@ html, body {
   display: block;
   color: inherit;
   text-decoration: none;
+}
+.ds-navigation ul li a:hover, .ds-footer-navigation ul li a:hover {
+  color: #FF5C00;
+}
+.ds-navigation ul li a:active, .ds-footer-navigation ul li a:active {
+  color: #FF7222;
 }
 
 .ds-navigation {
@@ -182,6 +209,14 @@ html, body {
   width: -moz-fit-content;
   width: fit-content;
 }
+.ds-cta:hover {
+  border-color: #C94800;
+  color: #C94800;
+}
+.ds-cta:active {
+  border-color: #FF7222;
+  color: #FF7222;
+}
 
 .ds-cta-filled {
   display: block;
@@ -199,9 +234,18 @@ html, body {
   width: -moz-fit-content;
   width: fit-content;
 }
+.ds-cta-filled:hover {
+  background-color: #C94800;
+}
+.ds-cta-filled:active {
+  background-color: #FF7222;
+}
 .ds-cta-filled__inversed {
-  background-color: #000000;
+  background-color: #1D1D1D;
   color: #FF5C00;
+}
+.ds-cta-filled__inversed:hover {
+  background-color: #000000;
 }
 @media screen and (max-width: 992px) {
   .ds-cta-filled__inversed {
@@ -477,6 +521,18 @@ section#need-for-traff {
     margin: auto;
   }
 }
+a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link) {
+  color: #FF5C00;
+  text-decoration: underline;
+  word-wrap: break-word;
+}
+a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link):hover {
+  color: #C94800;
+}
+a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link):active {
+  color: #FF7222;
+}
+
 .ds-rounded-text {
   padding: 1.5em;
   color: #FFFFFF;
@@ -487,11 +543,6 @@ section#need-for-traff {
 }
 .ds-rounded-text.opaque {
   background-color: #111111;
-}
-.ds-rounded-text a:not(.ds-cta):not(.ds-cta-filled) {
-  color: #FF5C00;
-  text-decoration: underline;
-  word-wrap: break-word;
 }
 
 @media all and (min-width: 993px) {
@@ -656,10 +707,6 @@ section#need-for-traff {
 .ds-row-slider {
   overflow: hidden;
 }
-.ds-row-slider a:not(.ds-cta):not(.ds-cta-filled) {
-  color: #FF5C00;
-  text-decoration: underline;
-}
 @media all and (min-width: 993px) {
   .ds-row-slider__illustration {
     width: 33%;
@@ -722,14 +769,15 @@ section#need-for-traff {
   }
   .ds-row-slider__illustration {
     border: 1px solid #FF5C00;
-    width: 99%;
+    width: 91%;
+    margin: auto;
   }
   .ds-row-slider__illustration img {
     display: block;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     height: auto;
-    width: 99%;
+    width: 100%;
     -o-object-fit: contain;
        object-fit: contain;
   }
@@ -752,10 +800,6 @@ section#need-for-traff {
 .ds-row-desktop__content p, .ds-row-desktop__content ul li {
   color: #FFFFFF;
   font-size: 1.25rem;
-}
-.ds-row-desktop__content a:not(.ds-cta):not(.ds-cta-filled) {
-  color: #FF5C00;
-  text-decoration: underline;
 }
 .ds-row-desktop__illustration {
   width: 41%;
@@ -1018,6 +1062,21 @@ ul li ul li::marker, ol li ul li::marker {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+}
+.footer__top .ds-footer-navigation__socials li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #FF5C00;
+}
+.footer__top .ds-footer-navigation__socials li a:hover {
+  background-color: #C94800;
+}
+.footer__top .ds-footer-navigation__socials li a:active {
+  background-color: #FF7222;
 }
 @media all and (min-width: 993px) {
   .footer__top .ds-footer__links {
