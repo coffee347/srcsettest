@@ -4,7 +4,7 @@ html, body {
   padding: 0;
   font-size: 100%;
   font-family: "Montserrat", "Gotham", "Century Gothic", Geneva, Verdana, sans-serif;
-  background-color: #000000;
+  background-color: #000000;f
 }
 
 .header {
@@ -725,7 +725,7 @@ section#need-for-traff {
     padding: 0;
     margin: 0;
     height: auto;
-    width: 100%;
+    width: 99%;
     -o-object-fit: contain;
        object-fit: contain;
   }
