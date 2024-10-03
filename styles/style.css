@@ -973,7 +973,7 @@ ul li ul li::marker, ol li ul li::marker {
 .footer__top {
   display: flex;
   position: relative;
-  padding: 1.5em;
+  padding: 1.5em 3.188em;
 }
 .footer__top .ds-footer-navigation {
   display: flex;
