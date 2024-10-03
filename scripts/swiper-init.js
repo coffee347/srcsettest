@@ -1,29 +1,19 @@
 let windowWidth = window.innerWidth;
 
-let ps = new Splide('.ds-row-slider.splide', {
-    arrows: false,
-    classes: {
-        pagination: 'ds-row-slider__pagination',
-    }
-});
-ps.mount();
 
-
-
-
-
-
-
-
+var elms = document.getElementsByClassName( 'splide' );
 
 
 
 if (windowWidth < 993) {
-    // new Swiper('.ds-row-slider', {
-    //     pagination: {
-    //         el: '.ds-swiper-pagination',
-    //     },
-    // });
+    for ( var i = 0; i < elms.length; i++ ) {
+        new Splide( elms[ i ], {
+              arrows: false,
+              classes: {
+                  pagination: 'ds-row-slider__pagination',
+              }
+          }).mount();
+    }
 }
 
 window.addEventListener('resize', function() {
@@ -63,8 +53,6 @@ window.addEventListener('resize', function() {
         //         element.swiper.destroy();
         //     });
         // }
-
-
 
     }
 });

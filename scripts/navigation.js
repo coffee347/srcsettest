@@ -53,6 +53,10 @@ function manageSecondSectionBorder(requiredPadding) {
     
     let mainSectionHeight = mainSection.offsetHeight;
     bannerWrapper.style.height = mainSectionHeight + 'px';
+
+    if (windowWidth > 1024) {
+        bannerWrapper.style.height = 'auto';
+    }
 }
 
 manageSecondSectionBorder();
