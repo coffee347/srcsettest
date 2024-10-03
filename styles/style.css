@@ -720,6 +720,9 @@ section#need-for-traff {
     border-radius: 1.875em;
     width: 99%;
   }
+  .ds-row-slider__illustration {
+    width: 99%;
+  }
   .ds-row-slider__illustration img {
     display: block;
     padding: 0;
