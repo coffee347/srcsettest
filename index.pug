@@ -4,7 +4,7 @@ html(lang="ru")
         meta(charset="utf8")
         meta(name="viewport", content="width=device-width, initial-scale=1")
         title="DS Partners"
-        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
         link(rel="stylesheet", href="styles/style.css")
         link(rel="stylesheet", href="styles/fonts-loader.css")
     body
@@ -17,15 +17,15 @@ html(lang="ru")
                 nav.ds-navigation
                     ul
                         li 
-                            a(href="#main") Головна
+                            a.ds-nav-link(href="#main") Головна
                         li 
-                            a(href="#need-for-traff") Need for Traff
+                            a.ds-nav-link(href="#need-for-traff") Need for Traff
                         li 
-                            a(href="#conditions") Умови
+                            a.ds-nav-link(href="#conditions") Умови
                         li 
-                            a(href="#grand-finale") Гранд-фінал
+                            a.ds-nav-link(href="#grand-finale") Гранд-фінал
                         li 
-                            a(href="#join") Приєднатися
+                            a.ds-nav-link(href="#join") Приєднатися
                 button.ds-cta Реєстрація
 
         .ds-mobile-menu
@@ -34,24 +34,24 @@ html(lang="ru")
             nav.ds-mobile-menu__navigation
                 ul
                     li 
-                        a(href="#main") Головна
+                        a.ds-nav-link(href="#main") Головна
                     li 
-                        a(href="#need-for-traff") Need for Traff
+                        a.ds-nav-link(href="#need-for-traff") Need for Traff
                     li 
-                        a(href="#conditions") Умови
+                        a.ds-nav-link(href="#conditions") Умови
                     li 
-                        a(href="#grand-finale") Гранд-фінал
+                        a.ds-nav-link(href="#grand-finale") Гранд-фінал
                     li 
-                        a(href="#join") Приєднатися            
+                        a.ds-nav-link(href="#join") Приєднатися            
             ul.ds-mobile-menu__socials
                 li
-                    a(href="https://t.me/dspartners_pro")
+                    a.ds-nav-link(href="https://t.me/dspartners_pro")
                         img(src="images/footer-icon-telegram.png")    
                 li
-                    a(href="https://www.instagram.com/dspartners.pro/")
+                    a.ds-nav-link(href="https://www.instagram.com/dspartners.pro/")
                         img(src="images/footer-icon-instagram.png")
                 li
-                    a(href="mailto:nft@dspartners.pro")
+                    a.ds-nav-link(href="mailto:nft@dspartners.pro")
                         img(src="images/footer-icon-mail.png")
             img(src="images/logo-half-circle-mobilemenu.png").ds-circle-logo.ds-circle-logo--mobile-menu
     
@@ -60,7 +60,7 @@ html(lang="ru")
                 source(media="(min-width: 577px)", srcset="images/Banner--desktop.png")
                 source(media="(min-width: 0)", srcset="images/Banner--mobile.png ")
                 img(src="images/Banner--mobile.png", alt="Hero section banner text with a car")
-            section#main(style="border: 1px solid yellow;")
+            section#main
                 .section-content
                     .banner-logo-wrapper
                         img(src="images/banner-logo.png" alt="Banner logo").banner-logo
@@ -69,7 +69,7 @@ html(lang="ru")
                 img(src="images/half-circle-logo-half.png").ds-circle-logo.ds-circle-logo--half-edge-2
                 .ds-button Реєструйся та забирай
 
-        section#need-for-traff(style="border: 1px solid red;")
+        section#need-for-traff
             h2.ds-section-header Що таке "Need for Traff"?
             p(style="max-width: 876px; margin-left: auto").ds-rounded-text
                 |   Так само як 'Need for Speed' означає жагу швидкості, 
@@ -106,117 +106,42 @@ html(lang="ru")
                 | Виконавши всі три рівня, ви автоматично берете участь у всіх етапах конкурса і можете виграти будь-який із призів (навіть якщо ви вже виграли щось на рівнях 1 і 2, ви продовжуєте брати участь у розіграші автомобіля).
 
             .ds-prizes-container
-
-                .ds-illustrated-row.ds-illustrated-row-ps5
-                    .ds-row-slider
-                        .swiper-wrapper
-                            .swiper-slide
-                                .ds-row-slider__content
-                                    .ds-cta Рівень 1 - PlayStation
-                                    h3.illustated-row-header Виконавши умови першого рівня, ви можете виграти PlayStation 5
-                                    ul
-                                        li Зареєструватися в <a href="#">Telegram-боті</a> та натиснути кнопку 'Приступити до виконання'
-                                        li Підписатися на офіційні сторінки DS Partners в <a href="#">Instagram</a> та <a href="#">Telegram</a>
-                                        li Поставити лайк <a href="#">конкурсному посту</a> в Instagram 
-                                        li У коментарях під конкурсним постом відзначити одного друга
-                                        li Зробити репост <a href="#">конкурсного посту</a> до себе в Instagram сторіс
-                            .swiper-slide    
-                                .ds-row-slider__illustration
-                                    picture
-                                        source(media="(min-width: 577px)", srcset="images/ps5.png")
-                                        source( media="(min-width: 0)", srcset="images/ps5_mobile.png")
-                                        img(src="images/ps5.png")
-                        .ds-swiper-pagination
-
-                    .ds-row-desktop
-                        .ds-row-desktop__illustration 
-                            picture
-                                source(media="(min-width: 577px)", srcset="images/ps5.png")
-                                source( media="(min-width: 0)", srcset="images/ps5_mobile.png")
-                                img(src="images/ps5.png")
-                        .ds-row-desktop__content 
-                            .ds-cta Рівень 1 - PlayStation
-                            h3.illustated-row-header Виконавши умови першого рівня, ви можете виграти PlayStation 5
-                            ul
-                                li Зареєструватися в <a href="#">Telegram-боті</a> та натиснути кнопку 'Приступити до виконання'
-                                li Підписатися на офіційні сторінки DS Partners в <a href="#">Instagram</a> та <a href="#">Telegram</a>
-                                li Поставити лайк <a href="#">конкурсному посту</a> в Instagram 
-                                li У коментарях під конкурсним постом відзначити одного друга
-                                li Зробити репост <a href="#">конкурсного посту</a> до себе в Instagram сторіс
-              
-                .ds-illustrated-row.ds-illustrated-row-iphone
-                    .ds-row-slider
-                        .swiper-wrapper
-                            .swiper-slide
-                                .ds-row-slider__content
-                                    .ds-cta Рівень 2 - iPhone 16
-                                    h3.illustated-row-header Виконавши умови другого рівня, ви можете виграти iPhone 16
-                                    ul
-                                        li Зареєструватися в <a href="#">Telegram-боті</a> та натиснути кнопку 'Приступити до виконання'
-                                        li <a href="#">Зареєструватися</a> в партнерській програмі DS Partners
-                                        li Відлити капу на один з офферів
-                                        li Задонатити 500 гривень у благодійний фонд <a href="#">“Hrabar Foundation” ЛІНК НА МОНОБАНКУ</a>
-                            .swiper-slide    
-                                .ds-row-slider__illustration
-                                    picture
-                                        source(media="(min-width: 577px)", srcset="images/iphone.png")
-                                        source( media="(min-width: 0)", srcset="images/iphone_mobile.png")
-                                        img(src="images/iphone.png")
-                        .ds-swiper-pagination
-
-                    .ds-row-desktop
-                        .ds-row-desktop__content 
-                            .ds-cta Рівень 2 - iPhone 16
-                            h3.illustated-row-header Виконавши умови другого рівня, ви можете виграти iPhone 16
-                            ul
-                                li Зареєструватися в <a href="#">Telegram-боті</a> та натиснути кнопку 'Приступити до виконання'
-                                li <a href="#">Зареєструватися</a> в партнерській програмі DS Partners
-                                li Відлити капу на один з офферів
-                                li Задонатити 500 гривень у благодійний фонд <a href="#">“Hrabar Foundation” ЛІНК НА МОНОБАНКУ</a>
-
-                        .ds-row-desktop__illustration 
-                            picture
-                                source(media="(min-width: 577px)", srcset="images/iphone.png")
-                                source( media="(min-width: 0)", srcset="images/iphone_mobile.png")
-                                img(src="images/iphone.png")
-                        
-                .ds-illustrated-row.ds-illustrated-row-car
-                    .ds-row-slider
-                        .swiper-wrapper
-                            .swiper-slide
-                                .ds-row-slider__content
-                                    .ds-cta Рівень 3 - автомобіль
-                                    h3.illustated-row-header Виконавши умови третього рівня, ви можете виграти автомобіль 
-                                    ul
-                                        li Зареєструватися в <a href="#">Telegram-боті</a> та натиснути кнопку 'Приступити до виконання'
-                                        li Виконати умови Рівнів 1 і 2
-                                        li Підписатися на офіційні сторінки DS Partners в <a href="#">Instagram</a> та <a href="#">Telegram</a>, поставити лайк <a href="#">конкурсному посту</a> в Instagram, у коментарях під конкурсним постом відмітити одного друга, зробити репост конкурсного посту до себе в Instagram сторіс
-                                        li <a href="#">Зареєструватися</a> в партнерській програмі DS Partners і відлити капу на один з офферів
-                                        li Задонатити 500 гривень у благодійний фонд <a href="#">“Hrabar Foundation” ЛІНК НА БАНКУ</a>
-                            .swiper-slide    
-                                .ds-row-slider__illustration
-                                    picture
-                                        source(media="(min-width: 577px)", srcset="images/car.png")
-                                        source( media="(min-width: 0)", srcset="images/car_mobile.png")
-                                        img(src="images/car.png")
-                        .ds-swiper-pagination
-
-                    .ds-row-desktop
-                        .ds-row-desktop__illustration 
-                            picture
-                                source(media="(min-width: 577px)", srcset="images/car.png")
-                                source( media="(min-width: 0)", srcset="images/car_mobile.png")
-                                img(src="images/car.png")
-                        .ds-row-desktop__content 
-                            .ds-cta Рівень 3 - автомобіль
-                            h3.illustated-row-header Виконавши умови третього рівня, ви можете виграти автомобіль 
-                            ul
-                                li Зареєструватися в <a href="#">Telegram-боті</a> та натиснути кнопку 'Приступити до виконання'
-                                li Виконати умови Рівнів 1 і 2
-                                li Підписатися на офіційні сторінки DS Partners в <a href="#">Instagram</a> та <a href="#">Telegram</a>, поставити лайк <a href="#">конкурсному посту</a> в Instagram, у коментарях під конкурсним постом відмітити одного друга, зробити репост конкурсного посту до себе в Instagram сторіс
-                                li <a href="#">Зареєструватися</a> в партнерській програмі DS Partners і відлити капу на один з офферів
-                                li Задонатити 500 гривень у благодійний фонд <a href="#">“Hrabar Foundation” ЛІНК НА БАНКУ</a>
-            
+                .ds-illustrated-row
+                    .ds-row-slider.splide
+                        .splide__track
+                            .splide__list
+                                .splide__slide
+                                    .ds-row-slider__content
+                                        .ds-cta Рівень 1 - PlayStation
+                                        h3.illustated-row-header Виконавши умови першого рівня, ви можете виграти PlayStation 5
+                                        ul
+                                            li Зареєструватися в <a href="#">Telegram-боті</a> та натиснути кнопку 'Приступити до виконання'
+                                            li Підписатися на офіційні сторінки DS Partners в <a href="#">Instagram</a> та <a href="#">Telegram</a>
+                                            li Поставити лайк <a href="#">конкурсному посту</a> в Instagram 
+                                            li У коментарях під конкурсним постом відзначити одного друга
+                                            li Зробити репост <a href="#">конкурсного посту</a> до себе в Instagram сторіс
+                                .splide__slide    
+                                    .ds-row-slider__illustration
+                                        picture
+                                            source(media="(min-width: 577px)", srcset="images/ps5.png")
+                                            source( media="(min-width: 0)", srcset="images/ps5_mobile.png")
+                                            img(src="images/ps5.png")
+                .ds-row-desktop
+                    .ds-row-desktop__illustration 
+                        picture
+                            source(media="(min-width: 577px)", srcset="images/ps5.png")
+                            source( media="(min-width: 0)", srcset="images/ps5_mobile.png")
+                            img(src="images/ps5.png")
+                    .ds-row-desktop__content 
+                        .ds-cta Рівень 1 - PlayStation
+                        h3.illustated-row-header Виконавши умови першого рівня, ви можете виграти PlayStation 5
+                        ul
+                            li Зареєструватися в <a href="#">Telegram-боті</a> та натиснути кнопку 'Приступити до виконання'
+                            li Підписатися на офіційні сторінки DS Partners в <a href="#">Instagram</a> та <a href="#">Telegram</a>
+                            li Поставити лайк <a href="#">конкурсному посту</a> в Instagram 
+                            li У коментарях під конкурсним постом відзначити одного друга
+                            li Зробити репост <a href="#">конкурсного посту</a> до себе в Instagram сторіс
+                    
             p.ds-rounded-text.opaque.ds-legal * фото мають ілюстративний характер, фінальний приз може відрізнятися від картинки.
 
         section#grand-finale
@@ -256,32 +181,32 @@ html(lang="ru")
                                 .ds-footer-navigation__columns
                                     ul.ds-footer-navigation__anchors
                                         li 
-                                            a(href="#main") Головна
+                                            a.ds-nav-link(href="#main") Головна
                                         li 
-                                            a(href="#need-for-traff") Need for Traff
+                                            a.ds-nav-link(href="#need-for-traff") Need for Traff
                                         li 
-                                            a(href="#conditions") Умови
+                                            a.ds-nav-link(href="#conditions") Умови
                                     ul.ds-footer-navigation__anchors
                                         li 
-                                            a(href="#grand-finale") Гранд-фінал
+                                            a.ds-nav-link(href="#grand-finale") Гранд-фінал
                                         li 
-                                            a(href="#join") Приєднатися
+                                            a.ds-nav-link(href="#join") Приєднатися
                                         li 
-                                            a(href="oferta.html") Публічна оферта
+                                            a.ds-nav-link(href="oferta.html") Публічна оферта
 
                                 ul.ds-footer-navigation__socials
                                     li
-                                        a(href="https://t.me/dspartners_pro")
+                                        a.ds-nav-link(href="https://t.me/dspartners_pro")
                                             img(src="images/footer-icon-telegram.png")    
                                     li
-                                        a(href="https://www.instagram.com/dspartners.pro/")
+                                        a.ds-nav-link(href="https://www.instagram.com/dspartners.pro/")
                                             img(src="images/footer-icon-instagram.png")
                                     li
-                                        a(href="mailto:nft@dspartners.pro")
+                                        a.ds-nav-link(href="mailto:nft@dspartners.pro")
                                             img(src="images/footer-icon-mail.png")
 
                 .footer__bottom
                     p © 2024 DS Partners. All rights reserved.
-        script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
         script(src="scripts/swiper-init.js")
         script(src="scripts/navigation.js")
