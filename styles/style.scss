@@ -917,15 +917,11 @@ a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link) {
         }
 
         .swiper-slide {
-            max-width: 99%;
-            border: 1px solid #FFFFFF;
+            border: 0.5px solid #FFFFFF;
         }
 
         .ds-row-slider__illustration {
-            border: 1px solid #FF5C00;
-            width: 91%;
             margin: auto;
-            
 
             img {
                 display: block;
