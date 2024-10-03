@@ -764,7 +764,6 @@ a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link):active {
 }
 @media screen and (max-width: 992px) {
   .ds-row-slider {
-    width: 90%;
     margin: auto;
   }
   .swiper-wrapper {
@@ -775,7 +774,7 @@ a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link):active {
   }
   .swiper-slide {
     border: 0.5px solid #FFFFFF;
-    width: 98% !important;
+    width: 99% !important;
   }
   .ds-row-slider__illustration {
     margin: auto;
