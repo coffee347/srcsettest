@@ -32,9 +32,6 @@ window.addEventListener('scroll', function() {
     } 
 });
 
-
-
-
 let mobileMenu = document.querySelector('.ds-mobile-menu');
 let mobileMenuTrigger = document.querySelector('#mobile-menu-trigger');
 let mobileMenuClose = document.querySelector('#mobile-menu-close');
@@ -46,3 +43,20 @@ mobileMenuTrigger.addEventListener('click', function() {
 mobileMenuClose.addEventListener('click', function() {
     mobileMenu.classList.remove('ds-mobile-menu--opened');
 })
+
+
+let bannerWrapper = document.querySelector('.main-banner-wrapper');
+let mainSection = document.querySelector('.main-banner-wrapper section#main');
+
+function manageSecondSectionBorder(requiredPadding) {
+    windowWidth = window.innerWidth;
+    
+    let mainSectionHeight = mainSection.offsetHeight;
+    bannerWrapper.style.height = mainSectionHeight + 'px';
+}
+
+manageSecondSectionBorder();
+
+window.addEventListener('resize', function() {
+    manageSecondSectionBorder();
+});
