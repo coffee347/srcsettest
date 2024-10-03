@@ -334,14 +334,14 @@ html, body {
 @media screen and (min-width: 485px) and (max-width: 992px) {
   .main-banner-wrapper {
     background-image: none;
-    margin-top: 68px;
+    margin-top: 80px;
     position: relative;
   }
 }
 @media screen and (max-width: 484px) {
   .main-banner-wrapper {
     background-image: none;
-    margin-top: 68px;
+    margin-top: 80px;
     position: relative;
   }
 }
@@ -718,6 +718,7 @@ section#need-for-traff {
     background-color: #111111;
     border: 1px solid #303030;
     border-radius: 1.875em;
+    width: 99%;
   }
   .ds-row-slider__illustration img {
     display: block;
