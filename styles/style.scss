@@ -502,6 +502,24 @@ section#main {
 
 section#need-for-traff {
     position: relative;
+
+    @media all and (min-width: 993px) {
+        .ds-cta {
+            font-size: 1rem;            
+        }
+    }
+    
+    @media screen and (max-width: 992px) {
+        .ds-cta {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    section#need-for-traff {
+        margin-top: 1.25rem;
+    }
 }
 
 .ds-section-header {
@@ -702,7 +720,7 @@ section#need-for-traff {
     
     @media screen and (max-width: 992px) {
         &--half-edge-2 {
-            bottom: 26px;
+            bottom: 0;
             right: 0;
             width: 80px;
             height: 136px;
@@ -1260,21 +1278,6 @@ ul, ol {
         padding-top: 20px;
         padding-left: 25px;
         padding-right: 25px;
-    }
-}
-
-
-#need-for-traff {
-    @media all and (min-width: 993px) {
-        .ds-cta {
-            font-size: 1rem;            
-        }
-    }
-    
-    @media screen and (max-width: 992px) {
-        .ds-cta {
-            font-size: 1.25rem;
-        }
     }
 }
 

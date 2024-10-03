@@ -404,7 +404,22 @@ section#main .banner-description {
 section#need-for-traff {
   position: relative;
 }
+@media all and (min-width: 993px) {
+  section#need-for-traff .ds-cta {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  section#need-for-traff .ds-cta {
+    font-size: 1.25rem;
+  }
+}
 
+@media screen and (max-width: 992px) {
+  section#need-for-traff {
+    margin-top: 1.25rem;
+  }
+}
 .ds-section-header {
   position: relative;
   border-radius: 2em;
@@ -584,7 +599,7 @@ section#need-for-traff {
 }
 @media screen and (max-width: 992px) {
   .ds-circle-logo--half-edge-2 {
-    bottom: 26px;
+    bottom: 0;
     right: 0;
     width: 80px;
     height: 136px;
@@ -1043,17 +1058,6 @@ ul li ul li::marker, ol li ul li::marker {
     padding-right: 25px;
   }
 }
-@media all and (min-width: 993px) {
-  #need-for-traff .ds-cta {
-    font-size: 1rem;
-  }
-}
-@media screen and (max-width: 992px) {
-  #need-for-traff .ds-cta {
-    font-size: 1.25rem;
-  }
-}
-
 @media screen and (max-width: 992px) {
   #grand-finale {
     display: flex;
