@@ -914,7 +914,11 @@ a:not(.ds-cta):not(.ds-cta-filled):not(.ds-nav-link) {
             background-color: #111111;
             border: 1px solid #303030;
             border-radius: 1.875em;
-            width: 99%;
+        }
+
+        .swiper-slide {
+            max-width: 99%;
+            border: 1px solid #FFFFFF;
         }
 
         .ds-row-slider__illustration {
