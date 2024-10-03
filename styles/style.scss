@@ -1170,7 +1170,6 @@ ul, ol {
     &__top {
         display: flex;
         position: relative;
-        padding: 1.5em 3.188em;
 
         .ds-footer {
             &-navigation {
@@ -1240,6 +1239,7 @@ ul, ol {
             flex-direction: row;
             justify-content: flex-start;
             gap: 0 77px;
+            padding: 1.5em 3.188em;
         }
     }
 
@@ -1248,6 +1248,7 @@ ul, ol {
             flex-direction: column;
             justify-content: flex-start;
             gap: 48px 0;
+            padding: 1.5em;
         }
     }
 
